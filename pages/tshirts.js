@@ -178,7 +178,7 @@ const tshirts = () => {
           <div className="mt-4 text-center md:text-left">
             <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts</h3>
             <h2 className="text-gray-900 title-font text-lg font-medium">Fill your Box</h2>
-            <p className="mt-1">₹499</p>
+            <p className="mt-1">₹49</p>
             <p className="mt-1">S, M, L, XL, XXL</p>
           </div>
         </Link>
