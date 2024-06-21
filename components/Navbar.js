@@ -48,7 +48,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         </ul>
       </div>
       {/* //todo cart */}
-      <div className="flex cart absolute right-0 top-4 text-3xl md:text-3xl mx-4 text-purple-600 hover:text-pink-600 cursor-pointer">
+      <div className="flex cart absolute right-0 top-4 text-3xl md:text-3xl mx-4 text-purple-600 hover:text-purple-800 cursor-pointer">
         <Link href={'/login'}><MdAccountCircle className="mx-2"/></Link>
       
         <span className="relative inline-flex " onClick={toggleCart}>

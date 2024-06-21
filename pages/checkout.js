@@ -14,27 +14,34 @@ const Checkout = ({ cart, addToCart, RemoveFromCart, clearCart, subTotal }) => {
     <div className="grid gap-6 mb-6 md:grid-cols-2 ">
         <div>
             <label htmlFor="first_name" className="block mb-2 text-sm  text-gray-900 ">First name</label>
-            <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="John" required/>
+            <input type="text" id="first_name" className="w-full bg-white rounded border border-gray-300
+focus:border-purple-500 focus:ring-2 focus: ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-transition-colors duration-200 ease-in-out" placeholder="John" required/>
+            
         </div>
         <div>
             <label htmlFor="last_name" className="block mb-2 text-sm  text-gray-900 ">Last name</label>
-            <input type="text" id="last_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Doe" />
+            <input type="text" id="last_name" className="w-full bg-white rounded border border-gray-300
+focus:border-purple-500 focus:ring-2 focus: ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-transition-colors duration-200 ease-in-out" placeholder="Doe" />
         </div>
         <div>
             <label htmlFor="email" className="block mb-2 text-sm  text-gray-900 ">Email</label>
-            <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="email@gmail.com" required/>
+            <input type="email" id="email" className="w-full bg-white rounded border border-gray-300
+focus:border-purple-500 focus:ring-2 focus: ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-transition-colors duration-200 ease-in-out" placeholder="email@gmail.com" required/>
         </div>  
         <div>
             <label htmlFor="phone" className="block mb-2 text-sm  text-gray-900 ">Phone number</label>
-            <input type="tel" id="phone" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required/>
+            <input type="tel" id="phone" className="w-full bg-white rounded border border-gray-300
+focus:border-purple-500 focus:ring-2 focus: ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-transition-colors duration-200 ease-in-out" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required/>
         </div>
         <div>
             <label htmlFor="city" className="block mb-2 text-sm  text-gray-900 ">City</label>
-            <input type="url" id="city" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="City" required/>
+            <input type="url" id="city" className="w-full bg-white rounded border border-gray-300
+focus:border-purple-500 focus:ring-2 focus: ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-transition-colors duration-200 ease-in-out" placeholder="City" required/>
         </div>
         <div>
             <label htmlFor="state" className="block mb-2 text-sm  text-gray-900 ">State</label>
-            <input type="number" id="state" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="State" required/>
+            <input type="text" id="state" className="w-full bg-white rounded border border-gray-300
+focus:border-purple-500 focus:ring-2 focus: ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-transition-colors duration-200 ease-in-out" placeholder="State" required/>
         </div>
     </div>
     <div className="mb-6">
