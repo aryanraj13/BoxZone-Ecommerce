@@ -34,7 +34,7 @@ const ProductSchema = new mongoose.Schema({
         required:true
     },
     availableQty:{
-        type:String,
+        type:Number,
         required:true
     }
 },{timestamps:true});
