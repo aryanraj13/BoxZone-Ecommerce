@@ -69,7 +69,7 @@ focus:border-purple-500 focus:ring-2 focus: ring-purple-200 text-base outline-no
               <li key={k} className="hover:text-black">
                 <div className="item flex my-5">
                   <div className=" font-semibold text-sm">
-                    {cart[k].name}
+                    {cart[k].name}({cart[k].size}/{cart[k].variant})
                   </div>
                   <div className="w-1/3 flex font-semibold text-center justify-center items-center text-lg">
                     <AiFillMinusSquare

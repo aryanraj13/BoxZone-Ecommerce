@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react';
 import mongoose from 'mongoose';
  
-export default function Page({addToCart,product,variants}) {
+export default function Page({addToCart,product,variants,buyNow}) {
   const router = useRouter()
   const {slug} = router.query;
   const [pin,setPin] = useState()
@@ -29,6 +29,8 @@ export default function Page({addToCart,product,variants}) {
     let url=`http://localhost:3000/product/${variants[newcolor][newsize]['slug']}`
     window.location=url;
   }
+
+  
 
   return <>
   <section className="text-gray-600 body-font overflow-hidden">
@@ -114,7 +116,7 @@ export default function Page({addToCart,product,variants}) {
         <div className="flex">
           <span className="title-font font-medium text-2xl text-gray-900">₹{product.price}</span>
           
-          <button className="flex ml-8 text-white bg-purple-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-purple-600 rounded">Buy Now</button>
+          <button onClick={()=>{buyNow(slug,product.availableQty,product.price,product.title,product.size,product.color)}} className="flex ml-8 text-white bg-purple-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-purple-600 rounded">Buy Now</button>
           <button onClick={()=>{addToCart(slug,product.availableQty,product.price,product.title,product.size,product.color)}} className="flex ml-4 text-white bg-purple-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-purple-600 rounded">Add to Cart</button>
 
 
