@@ -33,26 +33,26 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
       <div className="nav">
         <ul className="flex items-center space-x-2 md:space-x-8 font-bold md:font-normal md:text-md">
           <Link href={"/tshirts"}>
-            <li>T-shirts</li>
+            <li className="hover:text-purple-600">T-shirts</li>
           </Link>
           <Link href={"/hoodies"}>
-            <li>Hoodies</li>
+            <li className="hover:text-purple-600">Hoodies</li>
           </Link>
           <Link href={"/stickers"}>
-            <li>Stickers</li>
+            <li className="hover:text-purple-600">Stickers</li>
           </Link>
           <Link href={"/mugs"}>
-            <li>Mugs</li>
+            <li className="hover:text-purple-600">Mugs</li>
           </Link>
           {/* <Link href={'/'}><li>T-shirts</li></Link> */}
         </ul>
       </div>
       {/* //todo cart */}
-      <div className="flex cart absolute right-0 top-4 text-3xl md:text-3xl mx-4 text-purple-600 hover:text-purple-800 cursor-pointer">
-        <Link href={'/login'}><MdAccountCircle className="mx-2"/></Link>
+      <div className="flex cart absolute right-0 top-4 text-3xl md:text-3xl mx-4 text-purple-600  cursor-pointer">
+        <Link href={'/login'}><MdAccountCircle className="hover:text-purple-800 mx-2"/></Link>
       
         <span className="relative inline-flex " onClick={toggleCart}>
-        <AiOutlineShoppingCart className="" />
+        <AiOutlineShoppingCart className="hover:text-purple-800" />
         {/* <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-pink-50 rounded-full -top-2 -right-2 ">{Object.keys(cart).qty}</div> */}
         </span>
       </div>
