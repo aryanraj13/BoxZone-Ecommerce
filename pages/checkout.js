@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import {AiFillPlusSquare, AiFillMinusSquare, AiFillShopping} from "react-icons/ai";
 
-const Checkout = ({ cart, addToCart, RemoveFromCart, clearCart, subTotal }) => {
+const Checkout = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   return (
     <div>
       <h1 className='text-2xl font-bold text-center my-4'>Check Out</h1>
@@ -74,7 +74,7 @@ focus:border-purple-500 focus:ring-2 focus: ring-purple-200 text-base outline-no
                   <div className="w-1/3 flex font-semibold text-center justify-center items-center text-lg">
                     <AiFillMinusSquare
                       onClick={() => {
-                        RemoveFromCart(
+                        removeFromCart(
                           k,
                           1,
                           cart[k].price,
