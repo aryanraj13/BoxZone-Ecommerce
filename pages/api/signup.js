@@ -1,9 +1,11 @@
+import CryptoJS from 'crypto-js'; // Import CryptoJS
 import User from "@/models/User";
 import connectDb from "@/middleware/mongoose";
 
 const handler=async (req,res)=>{
     if(req.method=='POST'){
-         let u = new User(req.body);
+        const {name,email} = req.body;
+         let u = new User({name,email,password:CryptoJS.AES.encrypt(req.body.password,"secret123").toString()});
          await u.save()
         res.status(200).json({success:"success"});
     }else{
@@ -12,7 +14,3 @@ const handler=async (req,res)=>{
 }
 
 export default connectDb(handler);
-
-
-
-  
