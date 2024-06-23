@@ -34,6 +34,7 @@ const login = () => {
     setEmail("");
     setPassword("");
     if(response.success){
+      localStorage.setItem('token',response.token)
     toast.success('Your are successfully logged In!', { position: "bottom-center", autoClose: 1300, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined});
     
     setTimeout(() => {
