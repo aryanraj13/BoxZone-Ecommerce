@@ -22,7 +22,7 @@ const login = () => {
         <div className="flex items-center justify-between">
           <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">Password</label>
           <div className="text-sm">
-            <Link href={'/forgot'} className="font-semibold text-purple-600 hover:text-purple-500">Forgot password?</Link>
+            <Link href={'/forgot'} className="font-semibold text-purple-600 hover:text-purple-900">Forgot password?</Link>
           </div>
         </div>
         <div className="mt-2">
@@ -37,7 +37,7 @@ const login = () => {
 
     <p className="mt-10 text-center text-sm text-gray-500">
       Not a member?
-      <Link href={'/signup'} className="font-semibold leading-6 text-purple-600 hover:text-purple-500">Sign Up</Link>
+      <Link href={'/signup'} className="font-semibold leading-6 text-purple-600 hover:text-purple-500"> Sign Up</Link>
     </p>
   </div>
 </div>
