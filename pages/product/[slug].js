@@ -2,6 +2,8 @@ import Product from '@/models/Product';
 import { useRouter } from 'next/router'
 import { useState } from 'react';
 import mongoose from 'mongoose';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
  
 export default function Page({addToCart,product,variants,buyNow}) {
   const router = useRouter()
@@ -13,8 +15,10 @@ export default function Page({addToCart,product,variants,buyNow}) {
     let pinJson = await pins.json();
     if(pinJson.includes(parseInt(pin))){
       setService(true);
+      toast.success('Your Pincode is servicable!', { position: "bottom-center", autoClose: 1300, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined});
     }else{
       setService(false);
+      toast.error('Sorry! Pincode not servicable', { position: "bottom-center", autoClose: 1300, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined});
     }
   }
 
@@ -34,6 +38,7 @@ export default function Page({addToCart,product,variants,buyNow}) {
 
   return <>
   <section className="text-gray-600 body-font overflow-hidden">
+  <ToastContainer position="bottom-center" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover/>
   <div className="container px-5 py-16 mx-auto">
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
       <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto px-24 object-cover object-top rounded" src={product.img}/>
@@ -117,7 +122,7 @@ export default function Page({addToCart,product,variants,buyNow}) {
           <span className="title-font font-medium text-2xl text-gray-900">₹{product.price}</span>
           
           <button onClick={()=>{buyNow(slug,product.availableQty,product.price,product.title,product.size,product.color)}} className="flex ml-8 text-white bg-purple-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-purple-600 rounded">Buy Now</button>
-          <button onClick={()=>{addToCart(slug,product.availableQty,product.price,product.title,product.size,product.color)}} className="flex ml-4 text-white bg-purple-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-purple-600 rounded">Add to Cart</button>
+          <button onClick={()=>{toast.success('Item added to cart!', { position: "bottom-center", autoClose: 1300, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined}); addToCart(slug,product.availableQty,product.price,product.title,product.size,product.color);}} className="flex ml-4 text-white bg-purple-500 border-0 py-2 px-2 md:px-6 focus:outline-none hover:bg-purple-600 rounded">Add to Cart</button>
 
 
           {/* <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
