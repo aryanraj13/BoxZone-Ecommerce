@@ -36,7 +36,6 @@ const signup = () => {
 
     const res = await fetch(`${apiUrl}/api/signup`, {
       method: "POST", 
-      mode: 'no-cors',
       headers: {
         "Content-Type": "application/json",
       },
