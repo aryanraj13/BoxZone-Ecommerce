@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {  useRouter } from "next/router";
 
 const signup = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter();
+
+  useEffect(()=>{
+    if(localStorage.getItem('token')){
+      router.push('/')
+    }
+  },[])
 
   const handleChange=(e)=>{
     if(e.target.name=='name'){
@@ -32,7 +40,7 @@ const signup = () => {
       body: JSON.stringify(data),
     });
     let response = await res.json();
-    console.log(response);
+    
     setEmail("");
     setName("");
     setPassword("");
@@ -41,20 +49,20 @@ const signup = () => {
   };
 
   return (
-    <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div className="flex min-h-full flex-col justify-center px-6 py-5 lg:px-8">
       <ToastContainer position="bottom-center" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover/>
-      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+      <div className=" sm:mx-auto sm:w-full sm:max-w-sm">
         <img
-          className="mx-auto h-auto w-auto"
+          className=" mx-auto h-auto w-auto"
           src="/logo.png"
           alt="Your Company"
         />
-        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+        <h2 className="mt-1 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
           Sign up for an account
         </h2>
       </div>
 
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+      <div className="mt-1 sm:mx-auto sm:w-full sm:max-w-sm">
         <form onSubmit={handleSubmit} className="space-y-6" method="POST">
           <div>
             <label
@@ -65,6 +73,7 @@ const signup = () => {
             </label>
             <div className="mt-2">
               <input
+              placeholder="  Aman Singh"
               value={name}
                 onChange={handleChange}
                 id="name"
@@ -85,6 +94,7 @@ const signup = () => {
             </label>
             <div className="mt-2">
               <input
+              placeholder="  aman45@gmail.com"
               value={email}
                 onChange={handleChange}
                 id="email"
@@ -107,7 +117,7 @@ const signup = () => {
               </label>
             </div>
             <div className="mt-2">
-              <input
+              <input placeholder="  ********"
               value={password}
                 onChange={handleChange}
                 id="password"
@@ -130,7 +140,7 @@ const signup = () => {
           </div>
         </form>
 
-        <p className="mt-10 text-center text-sm text-gray-500">
+        <p className="mt-7 text-center text-sm text-gray-500">
           Already have an account?
           <Link
             href={"/login"}

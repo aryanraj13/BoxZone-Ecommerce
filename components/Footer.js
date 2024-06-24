@@ -6,11 +6,11 @@ const Footer = () => {
   return (
     <div>
       <footer className="text-gray-600 body-font">
-  <div className=" container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-    <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+  <div className="ml-20 container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <div className=" w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
         <Link className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900" href={"/"}>
       
-        <Image src='/nav.png' alt='' width={200} height={40}/>
+        <Image src='/nav.png' style={{ width: "auto", height: "auto" }}  alt='' width={200} height={40}/>
       
       </Link>
       <p className="mt-2 text-sm text-gray-500 px-4">Fill your Box with Premium tshirts, hoodies and apparals</p>
@@ -37,16 +37,16 @@ const Footer = () => {
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">POLICY</h2>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-gray-600 hover:text-gray-800">First Link</a>
+            <a className="text-gray-600 hover:text-gray-800">Return Policy</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+            <a className="text-gray-600 hover:text-gray-800">Guidlines</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+            <a className="text-gray-600 hover:text-gray-800">Customers</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            <a className="text-gray-600 hover:text-gray-800">Our Belief</a>
           </li>
         </nav>
       </div>
@@ -54,16 +54,16 @@ const Footer = () => {
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SOCIAL</h2>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-gray-600 hover:text-gray-800">First Link</a>
+            <a className="text-gray-600 hover:text-gray-800">Facebook</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+            <a className="text-gray-600 hover:text-gray-800">Instagram</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+            <a className="text-gray-600 hover:text-gray-800">Twitter</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            <a className="text-gray-600 hover:text-gray-800">Mailer</a>
           </li>
         </nav>
       </div>
@@ -71,16 +71,16 @@ const Footer = () => {
         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">ABOUT</h2>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-gray-600 hover:text-gray-800">First Link</a>
+            <a className="text-gray-600 hover:text-gray-800">Starting</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Second Link</a>
+            <a className="text-gray-600 hover:text-gray-800">Journey</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Third Link</a>
+            <a className="text-gray-600 hover:text-gray-800">Future</a>
           </li>
           <li>
-            <a className="text-gray-600 hover:text-gray-800">Fourth Link</a>
+            <a className="text-gray-600 hover:text-gray-800">Goal</a>
           </li>
         </nav>
       </div>

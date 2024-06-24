@@ -9,10 +9,10 @@ const order = () => {
         <h2 className="text-sm title-font text-gray-500 tracking-widest">BoxZone.com</h2>
         <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">Order Id: #89777</h1>
         <p className="leading-relaxed mb-4">Your order has been successfully placed.</p>
-        <div class="flex mb-4">
-          <a class="flex-grow text-center py-2 text-lg px-1">Item Description</a>
-          <a class="flex-grow text-center border-gray-300 py-2 text-lg px-1">Quantity</a>
-          <a class="flex-grow text-center border-gray-300 py-2 text-lg px-1">Item Total</a>
+        <div className="flex mb-4">
+          <a className="flex-grow text-center py-2 text-lg px-1">Item Description</a>
+          <a className="flex-grow text-center border-gray-300 py-2 text-lg px-1">Quantity</a>
+          <a className="flex-grow text-center border-gray-300 py-2 text-lg px-1">Item Total</a>
         </div>
         <div className="flex border-t border-gray-200 py-2">
           <span className="text-gray-500">Fill your Box(XL/Red)</span>
@@ -38,7 +38,7 @@ const order = () => {
           
         </div>
       </div>
-      <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400"/>
+      <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://m.media-amazon.com/images/I/71AEwEupFuL._SY879_.jpg"/>
     </div>
   </div>
 </section>
