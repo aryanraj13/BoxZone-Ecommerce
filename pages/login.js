@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {  useRouter } from "next/router";
 
 const login = () => {
+  const apiUrl=process.env.NEXT_PUBLIC_API_URL;
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,7 +29,7 @@ const login = () => {
     e.preventDefault();
     const data = {email, password };
 
-    const res = await fetch("http://localhost:3000/api/login", {
+    const res = await fetch(`${apiUrl}/api/login`, {
       method: "POST", 
       headers: {
         "Content-Type": "application/json",
@@ -40,22 +41,22 @@ const login = () => {
     setPassword("");
     if(response.success){
       localStorage.setItem('token',response.token)
-    toast.success('Your are successfully logged In!', { position: "bottom-center", autoClose: 1300, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined});
+    toast.success('Your are successfully logged In!', { position: "top-center", autoClose: 1300, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined});
     
     setTimeout(() => {
-      router.push('http://localhost:3000') 
+      router.push(`${apiUrl}`) 
     }, 1000);
   
      
   }else{
-      toast.error('Invalid Credentials', { position: "bottom-center", autoClose: 1300, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined});
+      toast.error('Invalid Credentials', { position: "top-center", autoClose: 1300, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined});
 
     }
   };
 
   return (
     <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <ToastContainer position="bottom-center" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover/>
+        <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover/>
 
   <div className="sm:mx-auto sm:w-full sm:max-w-sm">
     <img className="mx-auto h-auto w-auto" src="/logo.png" alt="Your Company"/>

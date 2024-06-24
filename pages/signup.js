@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {  useRouter } from "next/router";
 
 const signup = () => {
+  const apiUrl=process.env.NEXT_PUBLIC_API_URL;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,10 +30,11 @@ const signup = () => {
   }
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
     const data = { name, email, password };
 
-    const res = await fetch("http://localhost:3000/api/signup", {
+    const res = await fetch(`${apiUrl}/api/signup`, {
       method: "POST", 
       headers: {
         "Content-Type": "application/json",
@@ -44,13 +46,13 @@ const signup = () => {
     setEmail("");
     setName("");
     setPassword("");
-    toast.success('Your account has been created successfully!', { position: "bottom-center", autoClose: 1300, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined});
+    toast.success('Your account has been created successfully!', { position: "top-center", autoClose: 1300, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined});
 
   };
 
   return (
     <div className="flex min-h-full flex-col justify-center px-6 py-5 lg:px-8">
-      <ToastContainer position="bottom-center" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover/>
+      <ToastContainer position="top-center" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover/>
       <div className=" sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           className=" mx-auto h-auto w-auto"
