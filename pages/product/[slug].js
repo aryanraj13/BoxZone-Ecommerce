@@ -6,12 +6,13 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
  
 export default function Page({addToCart,product,variants,buyNow}) {
+  const apiUrl=process.env.NEXT_PUBLIC_API_URL;
   const router = useRouter()
   const {slug} = router.query;
   const [pin,setPin] = useState()
   const [service,setService] = useState()
   const checkServiceablity =async()=>{
-    let pins = await fetch('http://localhost:3000/api/pincode')
+    let pins = await fetch(`${apiUrl}/api/pincode`)
     let pinJson = await pins.json();
     if(pinJson.includes(parseInt(pin))){
       setService(true);
@@ -30,7 +31,7 @@ export default function Page({addToCart,product,variants,buyNow}) {
   const [size,setSize]=useState(product.size);
 
   const refreshVariant = (newsize,newcolor) =>{
-    let url=`http://localhost:3000/product/${variants[newcolor][newsize]['slug']}`
+    let url=`${apiUrl}/product/${variants[newcolor][newsize]['slug']}`
     window.location=url;
   }
 
