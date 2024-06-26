@@ -57,10 +57,10 @@ const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subT
               <div className="absolute top-6 py-4 rounded-md px-5 w-32 border right-7 bg-white">
                 <ul>
                   <li className="py-1 text-sm hover:text-purple-500 hover:font-bold">
-                    <Link href={'/'}>My Account</Link>
+                    <Link href={'/myaccount'}>My Account</Link>
                   </li>
                   <li className="py-1 text-sm hover:text-purple-500 hover:font-bold">
-                    <Link href={'/'}>Orders</Link>
+                    <Link href={'/orders'}>Orders</Link>
                   </li>
                   <li onClick={logout} className="py-1 text-sm hover:text-purple-500 hover:font-bold cursor-pointer">Logout</li>
                 </ul>
