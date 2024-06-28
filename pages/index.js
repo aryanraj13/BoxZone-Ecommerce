@@ -106,7 +106,7 @@ export default function Home() {
             >
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4" />
             </svg>
-            <span className="sr-only">Previous </span>
+            <span className="sr-only">Previous</span>
           </span>
         </button>
 
